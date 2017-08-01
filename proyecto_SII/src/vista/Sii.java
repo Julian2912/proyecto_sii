@@ -39,7 +39,7 @@ public class Sii extends JFrame {
                  Menu menu = new Menu();
                  menu.setVisible(true);
                 }
-                else if(listaLogin.getSelectedIndex()==0)
+                else if(listaLogin.getSelectedIndex()==1)
                     System.out.println("secre");
                     else
                     System.out.println("profe");
@@ -155,8 +155,8 @@ public class Sii extends JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 40)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(149, 152, 154));
-        jLabel1.setText("SII");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, -1, -1));
+        jLabel1.setText("Sistema Integral de Información");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
         getContentPane().add(etiLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 150, 120));
 
         jPanel2.setBackground(new java.awt.Color(161, 42, 67));
