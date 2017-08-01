@@ -155,109 +155,6 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox6">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Grupos"/>
-                    <StringItem index="1" value="Maestros"/>
-                    <StringItem index="2" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox6ItemStateChanged"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="41" width="120" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="140" width="120" height="110"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="jList1">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="14" style="0"/>
-                    </Property>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="6">
-                        <StringItem index="0" value="Grupo A"/>
-                        <StringItem index="1" value="Grupo B"/>
-                        <StringItem index="2" value="Grupo C"/>
-                        <StringItem index="3" value="Grupo D"/>
-                        <StringItem index="4" value="Grupo E"/>
-                        <StringItem index="5" value="Grupo F"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="jLabel21">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="A&#xf1;o"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="85" width="-1" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox8">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="1"/>
-                    <StringItem index="1" value="2"/>
-                    <StringItem index="2" value="3"/>
-                    <StringItem index="3" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox8ItemStateChanged"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox8ActionPerformed"/>
-              </Events>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="115" width="120" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -349,7 +246,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JLabel" name="etiLogin">
+            <Component class="javax.swing.JLabel" name="etiLogin1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -364,7 +261,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etiLoginMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etiLogin1MouseClicked"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -372,6 +269,222 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JComboBox" name="jComboBox8">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Grupos"/>
+                    <StringItem index="1" value="Maestros"/>
+                    <StringItem index="2" value=" "/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox8ItemStateChanged"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox8ActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="10" y="41" width="120" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="1c" green="e" red="54" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
+                <Property name="defaultCloseOperation" type="int" value="0"/>
+                <Property name="visible" type="boolean" value="true"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="10" y="80" width="130" height="30"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+                  <SubComponents>
+                    <Menu class="javax.swing.JMenu" name="jMenu1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Grados"/>
+                      </Properties>
+                      <SubComponents>
+                        <Menu class="javax.swing.JMenu" name="jMenu3">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Grado 1"/>
+                          </Properties>
+                          <SubComponents>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo A"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo B"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem7ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo C"/>
+                              </Properties>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo D"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem8ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo E"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem9ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo F"/>
+                              </Properties>
+                            </MenuItem>
+                          </SubComponents>
+                        </Menu>
+                        <Menu class="javax.swing.JMenu" name="jMenu4">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Grado 2"/>
+                          </Properties>
+                          <SubComponents>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo A"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem11ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo B"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem12ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo C"/>
+                              </Properties>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo D"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem14ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo E"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem15ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo F"/>
+                              </Properties>
+                            </MenuItem>
+                          </SubComponents>
+                        </Menu>
+                        <Menu class="javax.swing.JMenu" name="jMenu5">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Grado 3"/>
+                          </Properties>
+                          <SubComponents>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo A"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem17ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo B"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem18ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo C"/>
+                              </Properties>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo D"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem20ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo E"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem21ActionPerformed"/>
+                              </Events>
+                            </MenuItem>
+                            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Grupo F"/>
+                              </Properties>
+                            </MenuItem>
+                          </SubComponents>
+                        </Menu>
+                      </SubComponents>
+                    </Menu>
+                  </SubComponents>
+                </Menu>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
@@ -581,11 +694,11 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Asignar grupos"/>
+                <Property name="text" type="java.lang.String" value="Agregar Materias"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="270" y="280" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="270" y="280" width="120" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -661,7 +774,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="270" y="340" width="130" height="90"/>
+                  <AbsoluteConstraints x="270" y="340" width="200" height="100"/>
                 </Constraint>
               </Constraints>
 
@@ -671,12 +784,12 @@
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="6">
-                        <StringItem index="0" value="Grupo A"/>
-                        <StringItem index="1" value="Grupo B"/>
-                        <StringItem index="2" value="Grupo C"/>
-                        <StringItem index="3" value="Grupo D"/>
-                        <StringItem index="4" value="Grupo E"/>
-                        <StringItem index="5" value="Grupo F"/>
+                        <StringItem index="0" value="Matematicas"/>
+                        <StringItem index="1" value="Espa&#xf1;ol"/>
+                        <StringItem index="2" value="Quimiica"/>
+                        <StringItem index="3" value="Civica"/>
+                        <StringItem index="4" value="Artes"/>
+                        <StringItem index="5" value="Lectura y Redaccion"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -710,7 +823,8 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Grupos Asignados"/>
+                <Property name="text" type="java.lang.String" value="Materias Asignados"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -724,7 +838,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="530" y="310" width="130" height="120"/>
+                  <AbsoluteConstraints x="530" y="310" width="200" height="150"/>
                 </Constraint>
               </Constraints>
 
@@ -733,13 +847,14 @@
                 <Component class="javax.swing.JList" name="listaGrupoA">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                      <StringArray count="6">
-                        <StringItem index="0" value="1er A&#xf1;o  Grupo A "/>
-                        <StringItem index="1" value="1er A&#xf1;o Grupo C"/>
-                        <StringItem index="2" value="1er A&#xf1;o Grupo F"/>
-                        <StringItem index="3" value="2do A&#xf1;o  Grupo A "/>
-                        <StringItem index="4" value="2do A&#xf1;o  Grupo F "/>
-                        <StringItem index="5" value="3er A&#xf1;o  Grupo A "/>
+                      <StringArray count="7">
+                        <StringItem index="0" value="MAtematicas"/>
+                        <StringItem index="1" value="Ciencias Naturales"/>
+                        <StringItem index="2" value="Quimica"/>
+                        <StringItem index="3" value="Artes"/>
+                        <StringItem index="4" value="Civica"/>
+                        <StringItem index="5" value="Espa&#xf1;ol"/>
+                        <StringItem index="6" value="Lectura y Redaccion"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -830,6 +945,16 @@
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="120" width="120" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="400" y="440" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>

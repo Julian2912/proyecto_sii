@@ -6,13 +6,18 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.UIManager;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import utilerias.AsignaIcon;
 
@@ -23,6 +28,8 @@ import utilerias.AsignaIcon;
 public class Menu extends JFrame {
     private AsignaIcon asignaicon;
     private ButtonGroup grupoBtn, grupoBtnAlum ;
+    private JList listagrupos,listagrado1,listagrado2,listagrado3;
+
 
     /**
      * Creates new form Menu
@@ -31,6 +38,37 @@ public class Menu extends JFrame {
         initComponents();
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.white);
+        
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)jInternalFrame1.getUI()).setNorthPane(null);
+        jInternalFrame1.getContentPane().setBackground(new Color(84,14,28));
+        
+        listagrupos = new JList();        
+        listagrado1 = new JList();        
+        listagrado2 = new JList();        
+        listagrado3 = new JList();
+
+        listagrupos.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if(listagrupos.getSelectedIndex()==0){
+                listagrado1.setFont(new Font("Segoe UI", 0, 15)); // NOI18N
+        listagrado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Grupo A", "Grupo B", "Grupo C" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        JScrollPane scrollLista1 = new JScrollPane();
+        scrollLista1.setBounds(0, 0,90, 90);
+        scrollLista1.setViewportView(listagrupos);
+        jPanel1.add(scrollLista1);
+                }
+                else if(listagrupos.getSelectedIndex()==1){
+                 System.out.println("2");
+                }
+                else 
+                    System.out.println("3");
+            }
+        });
         
         asignaicon = new AsignaIcon();
         etiClose.setIcon(asignaicon.crearIcono("src/imagenes/btnClose.png", etiClose));
@@ -54,7 +92,6 @@ public class Menu extends JFrame {
             
         listaGrupoA.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);                
         listaGrupos.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        jList1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);     
 
     }
 
@@ -75,18 +112,38 @@ public class Menu extends JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jLabel21 = new javax.swing.JLabel();
-        jComboBox8 = new javax.swing.JComboBox<>();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         etiid = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
         jButton6 = new javax.swing.JButton();
-        etiLogin = new javax.swing.JLabel();
+        etiLogin1 = new javax.swing.JLabel();
+        jComboBox8 = new javax.swing.JComboBox<>();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
         jPanel3 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
         txtnameReg = new javax.swing.JTextField();
@@ -116,6 +173,7 @@ public class Menu extends JFrame {
         jComboBox5 = new javax.swing.JComboBox<>();
         eticode = new javax.swing.JLabel();
         cbxcode = new javax.swing.JComboBox<>();
+        jButton5 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
@@ -234,53 +292,6 @@ public class Menu extends JFrame {
         jPanel1.add(jLabel19);
         jLabel19.setBounds(10, 11, 44, 20);
 
-        jComboBox6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grupos", "Maestros", " " }));
-        jComboBox6.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBox6ItemStateChanged(evt);
-            }
-        });
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox6);
-        jComboBox6.setBounds(10, 41, 120, 26);
-
-        jList1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Grupo A", "Grupo B", "Grupo C", "Grupo D", "Grupo E", "Grupo F" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList1);
-
-        jPanel1.add(jScrollPane3);
-        jScrollPane3.setBounds(10, 140, 120, 110);
-
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("Año");
-        jPanel1.add(jLabel21);
-        jLabel21.setBounds(10, 85, 25, 20);
-
-        jComboBox8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", " " }));
-        jComboBox8.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBox8ItemStateChanged(evt);
-            }
-        });
-        jComboBox8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox8ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox8);
-        jComboBox8.setBounds(10, 115, 120, 26);
-
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -352,18 +363,184 @@ public class Menu extends JFrame {
         jPanel1.add(jButton6);
         jButton6.setBounds(40, 360, 90, 30);
 
-        etiLogin.setBackground(new java.awt.Color(255, 255, 255));
-        etiLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        etiLogin.setText("Detalles      >");
-        etiLogin.setOpaque(true);
-        etiLogin.setPreferredSize(new java.awt.Dimension(200, 32));
-        etiLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+        etiLogin1.setBackground(new java.awt.Color(255, 255, 255));
+        etiLogin1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        etiLogin1.setText("Detalles      >");
+        etiLogin1.setOpaque(true);
+        etiLogin1.setPreferredSize(new java.awt.Dimension(200, 32));
+        etiLogin1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                etiLoginMouseClicked(evt);
+                etiLogin1MouseClicked(evt);
             }
         });
-        jPanel1.add(etiLogin);
-        etiLogin.setBounds(40, 410, 90, 30);
+        jPanel1.add(etiLogin1);
+        etiLogin1.setBounds(40, 410, 90, 30);
+
+        jComboBox8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grupos", "Maestros", " " }));
+        jComboBox8.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox8ItemStateChanged(evt);
+            }
+        });
+        jComboBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox8);
+        jComboBox8.setBounds(10, 41, 120, 26);
+
+        jInternalFrame1.setBackground(new java.awt.Color(84, 14, 28));
+        jInternalFrame1.setBorder(null);
+        jInternalFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        jInternalFrame1.setVisible(true);
+
+        jMenu1.setText("Grados");
+
+        jMenu3.setText("Grado 1");
+
+        jMenuItem1.setText("Grupo A");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem7.setText("Grupo B");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem7);
+
+        jMenuItem2.setText("Grupo C");
+        jMenu3.add(jMenuItem2);
+
+        jMenuItem8.setText("Grupo D");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem8);
+
+        jMenuItem9.setText("Grupo E");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem9);
+
+        jMenuItem10.setText("Grupo F");
+        jMenu3.add(jMenuItem10);
+
+        jMenu1.add(jMenu3);
+
+        jMenu4.setText("Grado 2");
+
+        jMenuItem11.setText("Grupo A");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem11);
+
+        jMenuItem12.setText("Grupo B");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem12);
+
+        jMenuItem13.setText("Grupo C");
+        jMenu4.add(jMenuItem13);
+
+        jMenuItem14.setText("Grupo D");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem14);
+
+        jMenuItem15.setText("Grupo E");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem15);
+
+        jMenuItem16.setText("Grupo F");
+        jMenu4.add(jMenuItem16);
+
+        jMenu1.add(jMenu4);
+
+        jMenu5.setText("Grado 3");
+
+        jMenuItem17.setText("Grupo A");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem17);
+
+        jMenuItem18.setText("Grupo B");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem18);
+
+        jMenuItem19.setText("Grupo C");
+        jMenu5.add(jMenuItem19);
+
+        jMenuItem20.setText("Grupo D");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem20);
+
+        jMenuItem21.setText("Grupo E");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem21);
+
+        jMenuItem22.setText("Grupo F");
+        jMenu5.add(jMenuItem22);
+
+        jMenu1.add(jMenu5);
+
+        jMenuBar1.add(jMenu1);
+
+        jInternalFrame1.setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jInternalFrame1);
+        jInternalFrame1.setBounds(10, 80, 130, 30);
 
         jTabbedPane1.addTab("Consulta", jPanel1);
 
@@ -487,8 +664,8 @@ public class Menu extends JFrame {
 
         etiAgrupos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         etiAgrupos.setForeground(new java.awt.Color(255, 255, 255));
-        etiAgrupos.setText("Asignar grupos");
-        jPanel3.add(etiAgrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
+        etiAgrupos.setText("Agregar Materias");
+        jPanel3.add(etiAgrupos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 120, -1));
 
         jRadioButton4.setText("F");
         jRadioButton4.setBorderPainted(true);
@@ -530,13 +707,13 @@ public class Menu extends JFrame {
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, -1, -1));
 
         listaGrupos.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Grupo A", "Grupo B", "Grupo C", "Grupo D", "Grupo E", "Grupo F" };
+            String[] strings = { "Matematicas", "Español", "Quimiica", "Civica", "Artes", "Lectura y Redaccion" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(listaGrupos);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 130, 90));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 200, 100));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -545,17 +722,18 @@ public class Menu extends JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Grupos Asignados");
+        jLabel15.setText("Materias Asignados");
+        jLabel15.setToolTipText("");
         jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
         listaGrupoA.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "1er Año  Grupo A ", "1er Año Grupo C", "1er Año Grupo F", "2do Año  Grupo A ", "2do Año  Grupo F ", "3er Año  Grupo A " };
+            String[] strings = { "MAtematicas", "Ciencias Naturales", "Quimica", "Artes", "Civica", "Español", "Lectura y Redaccion" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane2.setViewportView(listaGrupoA);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 130, 120));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 200, 150));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -589,6 +767,9 @@ public class Menu extends JFrame {
             }
         });
         jPanel3.add(cbxcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 120, -1));
+
+        jButton5.setText("Agregar");
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, -1, -1));
 
         jTabbedPane1.addTab("Gestion Profesor", jPanel3);
 
@@ -963,10 +1144,6 @@ public class Menu extends JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void cbxGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxGruposActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxGruposActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         txtnameReg.setText("");
         txtApePReg.setText("");
@@ -1174,22 +1351,6 @@ restriccionNum(evt);        // TODO add your handling code here:
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxcode1ActionPerformed
 
-    private void jComboBox6ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox6ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ItemStateChanged
-
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
-
-    private void jComboBox8ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox8ItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox8ItemStateChanged
-
-    private void jComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox8ActionPerformed
-
     private void txtidMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtidMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_txtidMouseClicked
@@ -1214,9 +1375,69 @@ restriccionNum(evt);        // TODO add your handling code here:
             
     }//GEN-LAST:event_jCheckBox1StateChanged
 
-    private void etiLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etiLoginMouseClicked
-        JOptionPane.showMessageDialog(null, "Materia: Matematicas  Profesor: Julian\nMateria: Español  Profesor:Victor");
-    }//GEN-LAST:event_etiLoginMouseClicked
+    private void etiLogin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etiLogin1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_etiLogin1MouseClicked
+
+    private void jComboBox8ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox8ItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox8ItemStateChanged
+
+    private void jComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox8ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
+
+    private void cbxGruposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxGruposActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxGruposActionPerformed
  public void restriccionLetra(java.awt.event.KeyEvent evt){
         char c=evt.getKeyChar(); 
           if(Character.isDigit(c)) { 
@@ -1277,7 +1498,7 @@ restriccionNum(evt);        // TODO add your handling code here:
     private javax.swing.JComboBox<String> cbxtutor;
     private javax.swing.JLabel etiAgrupos;
     private javax.swing.JLabel etiClose;
-    private javax.swing.JLabel etiLogin;
+    private javax.swing.JLabel etiLogin1;
     private javax.swing.JLabel etiRest;
     private javax.swing.JLabel eticode;
     private javax.swing.JLabel eticode1;
@@ -1287,12 +1508,13 @@ restriccionNum(evt);        // TODO add your handling code here:
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -1301,7 +1523,6 @@ restriccionNum(evt);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
@@ -1314,7 +1535,29 @@ restriccionNum(evt);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1327,7 +1570,6 @@ restriccionNum(evt);        // TODO add your handling code here:
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
