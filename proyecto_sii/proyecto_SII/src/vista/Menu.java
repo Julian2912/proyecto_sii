@@ -1376,8 +1376,7 @@ restriccionNum(evt);        // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1StateChanged
 
     private void etiLogin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etiLogin1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_etiLogin1MouseClicked
+JOptionPane.showMessageDialog(null, evt);    }//GEN-LAST:event_etiLogin1MouseClicked
 
     private void jComboBox8ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox8ItemStateChanged
         // TODO add your handling code here:
